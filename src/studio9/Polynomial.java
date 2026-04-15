@@ -54,7 +54,10 @@ public class Polynomial {
 	public Polynomial derivative() {
 		Polynomial derivative = new Polynomial ();
 		for (int i = 0; i<list.size(); i++) {
+			int power = list.size()-i-1;
+			if (power > 0) {
 			derivative.addTerm(list.get(i)*(list.size()-i-1));
+			}
 		}
 			return derivative;
 	}
